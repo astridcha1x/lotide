@@ -1,18 +1,6 @@
 // ---------- EQARRAYS IMPLEMENTATION ---------- //
 
-const eqArrays = function(firstArray, secondArray) {
-
-  if (firstArray === secondArray) {
-    return true;
-  } else if (firstArray.length !== secondArray.length) {
-    return false;
-  } else if (firstArray === null || secondArray === null) {
-    return false;
-  }
-
-  return true;
-
-};
+const eqArrays = require('./eqArrays');
 
 // ---------- FUNCTION IMPLEMENTATION ---------- //
 
@@ -26,6 +14,6 @@ const assertArraysEqual = function(firstArray, secondArray) {
 
 };
 
-// ----------------- TEST CODE ----------------- //
+// ----------------- FUNCTION EXPORT ----------------- //
 
-console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
+module.exports = assertArraysEqual;

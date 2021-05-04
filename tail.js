@@ -1,14 +1,6 @@
 // -------- ASSERTEQUAL IMPLEMENTATION --------- //
 
-const assertEqual = function(actual, expected) {
-
-  if (actual === expected) {
-    console.log(`🙆 ✅ ASSERTION PASSED: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🙅 ❎ ASSERTION FAILED: ${actual} !== ${expected}`);
-  }
-
-};
+const assertEqual = require('./assertEqual');
 
 // ---------- FUNCTION IMPLEMENTATION ---------- //
 
@@ -24,8 +16,6 @@ const tail = function(newArray) {
 
 };
 
-// ----------------- TEST CODE ----------------- //
+// ----------------- FUNCTION EXPORT ----------------- //
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-console.log(assertEqual(words.length, 3)); // original array should still have 3 elements!
+module.exports = tail;
